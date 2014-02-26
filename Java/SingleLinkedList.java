@@ -78,7 +78,7 @@ public class SingleLinkedList {
 		if ((position % len) == 0)return head;
 		tmp = head;
 		node tmp2 = null;
-		int movesteps = len - (position)%len -1;
+		int movesteps = (position)%len -1;
 		while(movesteps != 0)
 		{
 			tmp = tmp.getNext();
@@ -121,7 +121,7 @@ public class SingleLinkedList {
 		node node2 = new node("2", node3);
 		node node1 = new node("1", node2);
 		//Rotate(node1, 4);
-		node1 = Rotate2(node1, 1);
+		node1 = Rotate2(node1, 4);
 		Print(node1);
 	}
 
