@@ -21,6 +21,7 @@ def ChangeOpensslVersion(smdir, oldversion, newversion):
 if __name__=="__main__":
   if len(argv) < 4:
     print("Usage: python ChangeOpensslVersion directory oldversion newversion")
+    print("Example: python ChangeOpensslVersion C:\SVN\SM\9.3x\9.35main\9.35main\server\rte openssl-1.0.2h-fips-2.0.12 openssl-1.0.2j-fips-2.0.13")
     exit(1)
 
   script, smdir, oldversion, newversion = argv
