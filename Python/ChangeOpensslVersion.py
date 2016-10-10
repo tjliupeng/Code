@@ -7,6 +7,9 @@ filearr = ["configure.ac", "rte-package-AIX.xml", "rte-package-HPUX-IA64.xml", "
 def ChangeOpensslVersion(smdir, oldversion, newversion):
   for file_name in filearr:
     changedfile = os.path.normpath( smdir + "/" + file_name)
+    if os.path.exists(changedfile) == False:
+      print (changedfile + " does not exist!")
+      continue
     print("Modifying " + changedfile)
     with open(changedfile) as f:
       s = f.read()
